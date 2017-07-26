@@ -3,7 +3,6 @@ import io
 import threading
 import picamera
 
-
 class Camera(object):
     thread = None
     frame = None
