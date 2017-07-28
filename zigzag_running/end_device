@@ -1,0 +1,26 @@
+static int count = 0;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(2, OUTPUT);
+  pinMode(8, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  char ch = Serial.read();
+  int val = digitalRead(2);
+
+  if(ch == 'A'){
+    digitalWrite(8, HIGH);
+  }
+
+  if(ch == 'A' && val==0){
+      digitalWrite(2, LOW);
+      Serial.write('a');
+      digitalWrite(8, LOW);
+  }
+  
+  val = 1;
+}
