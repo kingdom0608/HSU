@@ -1,0 +1,486 @@
+long randNumber;
+int start = 1;
+char V = 'A';
+int count = 10;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(8, INPUT);
+  pinMode(7, INPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+  randomSeed(analogRead(0));
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  int val = digitalRead(8);
+  int val1 = digitalRead(7);
+  
+  if(val == 0){
+    count = 0;
+    Serial.print("random=");
+    randNumber = random(1, 8);
+    Serial.println (randNumber);
+  }
+  
+  if(start == 1 && randNumber == 1){
+    if(count == 0){
+       V = 'A';
+       Serial.write(V);
+       delay(500);
+    
+       char ch = Serial.read();
+       if(ch == 'a'){
+        digitalWrite(9, HIGH);
+        count = 1;
+       }
+    }
+  
+    if(count == 1){
+      V = 'B';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'b'){
+        digitalWrite(10, HIGH);
+        count = 2; 
+      }
+    }
+
+    if(count == 2){
+      V = 'C';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'c'){
+        digitalWrite(11, HIGH);
+        count = 3; 
+      }
+    }
+
+    if(count == 3){
+      V = 'D';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'd'){
+        digitalWrite(12, HIGH);
+        count = 4; 
+      }
+    }
+
+    if(val1 == 0 && count == 4){
+      digitalWrite(9, LOW);
+      digitalWrite(10, LOW);
+      digitalWrite(11, LOW);
+      digitalWrite(12, LOW);
+      count = 5;
+    }
+  }
+  else if(start == 1 && randNumber == 2){
+    if(count == 0){
+       V = 'B';
+       Serial.write(V);
+       delay(500);
+    
+       char ch = Serial.read();
+       if(ch == 'b'){
+        digitalWrite(9, HIGH);
+        count = 1;
+       }
+    }
+  
+    if(count == 1){
+      V = 'A';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'a'){
+        digitalWrite(10, HIGH);
+        count = 2; 
+      }
+    }
+
+    if(count == 2){
+      V = 'D';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'd'){
+        digitalWrite(11, HIGH);
+        count = 3; 
+      }
+    }
+
+    if(count == 3){
+      V = 'C';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'c'){
+        digitalWrite(12, HIGH);
+        count = 4; 
+      }
+    }
+
+    if(val1 == 0 && count == 4){
+      digitalWrite(9, LOW);
+      digitalWrite(10, LOW);
+      digitalWrite(11, LOW);
+      digitalWrite(12, LOW);
+      count = 5;
+    }
+  }
+  else if(start == 1 && randNumber == 3){
+    if(count == 0){
+       V = 'C';
+       Serial.write(V);
+       delay(500);
+    
+       char ch = Serial.read();
+       if(ch == 'c'){
+        digitalWrite(9, HIGH);
+        count = 1;
+       }
+    }
+  
+    if(count == 1){
+      V = 'D';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'd'){
+        digitalWrite(10, HIGH);
+        count = 2; 
+      }
+    }
+
+    if(count == 2){
+      V = 'A';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'a'){
+        digitalWrite(11, HIGH);
+        count = 3; 
+      }
+    }
+
+    if(count == 3){
+      V = 'B';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'b'){
+        digitalWrite(12, HIGH);
+        count = 4; 
+      }
+    }
+
+    if(val1 == 0 && count == 4){
+      digitalWrite(9, LOW);
+      digitalWrite(10, LOW);
+      digitalWrite(11, LOW);
+      digitalWrite(12, LOW);
+      count = 5;
+    }
+  }
+  else if(start == 1 && randNumber == 4){
+    if(count == 0){
+       V = 'D';
+       Serial.write(V);
+       delay(500);
+    
+       char ch = Serial.read();
+       if(ch == 'd'){
+        digitalWrite(9, HIGH);
+        count = 1;
+       }
+    }
+  
+    if(count == 1){
+      V = 'C';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'c'){
+        digitalWrite(10, HIGH);
+        count = 2; 
+      }
+    }
+
+    if(count == 2){
+      V = 'B';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'b'){
+        digitalWrite(11, HIGH);
+        count = 3; 
+      }
+    }
+
+    if(count == 3){
+      V = 'A';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'a'){
+        digitalWrite(12, HIGH);
+        count = 4; 
+      }
+    }
+
+    if(val1 == 0 && count == 4){
+      digitalWrite(9, LOW);
+      digitalWrite(10, LOW);
+      digitalWrite(11, LOW);
+      digitalWrite(12, LOW);
+      count = 5;
+    }
+  }
+  else if(start == 1 && randNumber == 5){
+    if(count == 0){
+       V = 'A';
+       Serial.write(V);
+       delay(500);
+    
+       char ch = Serial.read();
+       if(ch == 'a'){
+        digitalWrite(9, HIGH);
+        count = 1;
+       }
+    }
+  
+    if(count == 1){
+      V = 'D';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'd'){
+        digitalWrite(10, HIGH);
+        count = 2; 
+      }
+    }
+
+    if(count == 2){
+      V = 'C';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'c'){
+        digitalWrite(11, HIGH);
+        count = 3; 
+      }
+    }
+
+    if(count == 3){
+      V = 'B';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'b'){
+        digitalWrite(12, HIGH);
+        count = 4; 
+      }
+    }
+
+    if(val1 == 0 && count == 4){
+      digitalWrite(9, LOW);
+      digitalWrite(10, LOW);
+      digitalWrite(11, LOW);
+      digitalWrite(12, LOW);
+      count = 5;
+    }
+  }
+  else if(start == 1 && randNumber == 6){
+    if(count == 0){
+       V = 'B';
+       Serial.write(V);
+       delay(500);
+    
+       char ch = Serial.read();
+       if(ch == 'b'){
+        digitalWrite(9, HIGH);
+        count = 1;
+       }
+    }
+  
+    if(count == 1){
+      V = 'D';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'd'){
+        digitalWrite(10, HIGH);
+        count = 2; 
+      }
+    }
+
+    if(count == 2){
+      V = 'A';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'a'){
+        digitalWrite(11, HIGH);
+        count = 3; 
+      }
+    }
+
+    if(count == 3){
+      V = 'C';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'c'){
+        digitalWrite(12, HIGH);
+        count = 4; 
+      }
+    }
+
+    if(val1 == 0 && count == 4){
+      digitalWrite(9, LOW);
+      digitalWrite(10, LOW);
+      digitalWrite(11, LOW);
+      digitalWrite(12, LOW);
+      count = 5;
+    }
+  }
+  else if(start == 1 && randNumber == 7){
+    if(count == 0){
+       V = 'C';
+       Serial.write(V);
+       delay(500);
+    
+       char ch = Serial.read();
+       if(ch == 'c'){
+        digitalWrite(9, HIGH);
+        count = 1;
+       }
+    }
+  
+    if(count == 1){
+      V = 'D';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'd'){
+        digitalWrite(10, HIGH);
+        count = 2; 
+      }
+    }
+
+    if(count == 2){
+      V = 'A';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'a'){
+        digitalWrite(11, HIGH);
+        count = 3; 
+      }
+    }
+
+    if(count == 3){
+      V = 'B';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'b'){
+        digitalWrite(12, HIGH);
+        count = 4; 
+      }
+    }
+
+    if(val1 == 0 && count == 4){
+      digitalWrite(9, LOW);
+      digitalWrite(10, LOW);
+      digitalWrite(11, LOW);
+      digitalWrite(12, LOW);
+      count = 5;
+    }
+  }
+  else if(start == 1 && randNumber == 8){
+    if(count == 0){
+       V = 'D';
+       Serial.write(V);
+       delay(500);
+    
+       char ch = Serial.read();
+       if(ch == 'd'){
+        digitalWrite(9, HIGH);
+        count = 1;
+       }
+    }
+  
+    if(count == 1){
+      V = 'C';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'c'){
+        digitalWrite(10, HIGH);
+        count = 2; 
+      }
+    }
+
+    if(count == 2){
+      V = 'A';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'a'){
+        digitalWrite(11, HIGH);
+        count = 3; 
+      }
+    }
+
+    if(count == 3){
+      V = 'B';
+      Serial.write(V);
+      delay(500);
+  
+      char ch = Serial.read();
+      if(ch == 'b'){
+        digitalWrite(12, HIGH);
+        count = 4; 
+      }
+    }
+
+    if(val1 == 0 && count == 4){
+      digitalWrite(9, LOW);
+      digitalWrite(10, LOW);
+      digitalWrite(11, LOW);
+      digitalWrite(12, LOW);
+      count = 5;
+    }
+  }
+}
