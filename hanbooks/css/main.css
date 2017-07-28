@@ -1,0 +1,19 @@
+body {
+	background: #ede6e6;
+	padding: 0px;
+	margin: 0px;
+  	font: 13px Georgia, Georgia;
+	color: #000000;
+	text-align: center;
+}
+
+html {
+  font-family: Georgia;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+mark {
+  background: #ffff00;
+  color: #fff00f;
+}

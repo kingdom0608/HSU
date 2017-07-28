@@ -1,0 +1,54 @@
+.boardArticle {width: 720px; margin:auto;}
+#boardList table {width: 720px; margin:auto; margin-left:auto; margin-right:auto;}
+#boardList th {padding: 5px 0; border-top: 2px solid #666; border-bottom: 1px solid #666; margin:auto}
+#boardList tr: hover {background: #eee; margin:auto}
+#boardList td {padding: 8px 0; border-bottom: 1px solid #666; margin:auto}
+#boardList .no {width: 60px; text-align: center;}
+#boardList .author {width: 100px; text-align: center;}
+#boardList .date {width: 100px; text-align: center;}
+#boardList .hit {width: 40px; text-align: center;}
+#boardList .btnSet {text-align: right;}
+#boardList .paging {text-align: center;}
+#boardList .paging li {display: inline-block; height: 20px; margin: 0 5px; padding: 0 5px; border: 1px solid #666; background: #ffffff; line-height: 21px;}
+#boardList .paging li.current,
+#boardList .paging li:hover {background: #ffffff;}
+#boardList .paging li.current,
+#boardList .paging li:hover a { color: #BLACK;}
+#boardList .searchBox{text-align: right;margin-right:auto;color: BLACK;}
+
+#boardWrite table {width: 720px; margin: auto; text-align: center;margin-left:auto; margin-right:auto;}
+#boardWrite th {width: 100px; padding: 5px; text-align: right; vertical-align: top;}
+#boardWrite td {width: 620px; padding: 5px;}
+#boardWrite #bID {width: 400px;color: BLACK;}
+#boardWrite #bPassword {width: 400px;color: BLACK;}
+#boardWrite #bTitle {width: 400px;color: BLACK;}
+#boardWrite #bContent {width: 550px; height: 300px;color: BLACK;}
+#boardWrite .btnSet {text-align: center;color: BLACK;}
+
+#boardView #boardTitle {border-bottom: 2px solid #black; text-align: left;}
+#boardView #boardInfo {margin: 0; text-align: left;
+border-bottom: 2px solid #black;
+}
+#boardView #boardContent {margin: 0; text-align: left; height : auto;padding: 5px;
+border-left: 2px solid #black;
+border-right: 2px solid #black;}
+#boardView .btnSet {text-align: right;
+color: BLACK;}
+
+#boardComment table {width: 100%; }
+#boardComment table th {width: 100px; padding: 0 5px; text-align: right; vertical-align: middle;}
+#boardComment table td {padding: 5px; text-align: left;}
+#boardComment #coContent {width: 99%; height: 120px; text-align: left; color:BLACK; }
+#commentView ul {list-style: none; margin: 0; padding:0;}
+#commentView .oneDepth {margin: 10px 0; padding: 10px; background-color: #ede6e6;}
+#commentView .twoDepth {margin: 20px; padding: 10px; background-color: #ede6e6;}
+#commentView .commentInfo {overflow: hidden;}
+#commentView .commentId {float: left; padding: 2px ;border: 3px solid #black;}
+#commentView .commentBtn {float: right;}
+#commentView .commentContent {clear: both;}
+
+#boardDelete table {width: 720px;}
+#boardDelete tbody th {width: 100px; padding: 5px; text-align: right; vertical-align: top;}
+#boardDelete tbody td {width: 620px; padding: 5px;}
+#boardDelete .btnSet {text-align: center;color: BLACK;}
+.textCenter {text-align: center;}
